@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+:root {
+    --main-color: #FFEDDE;
+    --black:#13131a;
+    --bg:#FFEDDE;
+    --border:.1rem solid #35CD8C;
+    --green:#35CD8C;
+    --blue:#2E266F;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    color:var(--blue);
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .7rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+/* media queries */
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box {
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2rem;
+}
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:black;
+    padding:2rem 0;
+}
+
+.review img {
+    width: 7rem;
+}
+
+.review .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*.review .box-container .box h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color:black;
+}*/
+
+.review h1 {
+    font-size: 5rem;
+    color: var(--blue);
+}
+
+.review .box-container .box .stars i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.location .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.location .box-container .box {
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2rem;
+}
+
+.location .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:black;
+    padding:2rem 0;
+}
+
+.location .row {
+    display: flex;
+    align-items: center;
+    background:var(--main-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.location .row .map {
+    flex: 1 1 45rem;
+    width: 80%;
+    height: 50rem;
+    object-fit: cover;
+}
